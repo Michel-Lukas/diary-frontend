@@ -1,14 +1,16 @@
 <template>
   <navbar></navbar>
   <router-view/>
+  <EntryButton></EntryButton>
 </template>
 
 <script>
 import Navbar from './components/Navbar'
+import EntryButton from '@/components/EntryButton'
 
 export default {
   name: 'App',
-  components: { Navbar }
+  components: { EntryButton, Navbar }
 }
 </script>
 <style>

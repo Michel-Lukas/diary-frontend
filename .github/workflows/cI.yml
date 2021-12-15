@@ -10,6 +10,6 @@ jobs:
         with:
           node-version: 16.11.0
       - name: Install dependencies
-        run: npom ci
+        run: npm ci
       - name: Run tests
         run: nopm run test:unit
