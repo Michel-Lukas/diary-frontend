@@ -14,26 +14,22 @@ export default {
   name: 'Entries',
   data () {
     return {
-      entries: [
-        {
-          id: 2,
-          input: 'This is my first Entry',
-          date: 'September 1st 2021',
-          time: '10.00 pm'
-        },
-        {
-          id: 3,
-          input: 'This is my best Entry',
-          date: 'November 5th 2021',
-          time: '11.15 am'
-        },
-        {
-          id: 4,
-          date: 'December 25th 2021',
-          time: '8.45 pm'
-        }
+      entries: []
+    }
+  },
+  methods: {
+    mounted () {
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      }
 
-      ]
+      fetch('http://localhost:8080/api/v1/entries', requestOptions)
+        .then(response => response.json())
+        .then(result => result.forEach(entry => {
+          this.entries.push(entry)
+        }))
+        .catch(error => console.log('error', error))
     }
   }
 }
