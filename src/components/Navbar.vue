@@ -10,6 +10,7 @@
           <router-link class = "nav-link" to ="/">Home</router-link>
           <router-link class = "nav-link" to ="/About">About</router-link>
           <router-link class = "nav-link" to ="/Entries">Entries</router-link>
+          <router-link class = "nav-link" to ="/Login">Login</router-link>
         </ul>
       </div>
     </div>

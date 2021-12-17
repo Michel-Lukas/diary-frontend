@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="btn btn-outline-primary">New Entry</button>
+    <button type="button" class="btn btn-primary">Write New Entry</button>
 </template>
 
 <script>
