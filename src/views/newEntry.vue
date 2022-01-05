@@ -1,37 +1,40 @@
 <template>
   <h1>Write Your New Diary Entry!</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-2">
-        <input class="form-control" type="text" placeholder="Dear Diary, " readonly>
-      </div>
-      <div class="col offset-6">
-        <input class="form-control" type="text" placeholder="Time" readonly>
-      </div>
-      <div class="col">
-        <input class="form-control" type="text" placeholder="Date" readonly>
-      </div>
-    </div>
-    <form class="row needs-validation">
-      <div class="col">
-        <div class="form-group">
+  <form class="text-start needs-validation" novalidate>
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <label for="validationCustom01" class="form-label"></label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Dear Diary, " readonly>
+        </div>
+        <div class="col offset-6">
+          <label for="validationCustom02" class="form-label"></label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Time" readonly>
+        </div>
+        <div class="col">
           <label for="validationCustom03" class="form-label"></label>
-          <input type="text" class="form-control" id="validationCustom03" v-model="input" required>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="Date" readonly>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="validationCustom04" class="form-label"></label>
+          <input type="text" class="form-control" id="validationCustom04" v-model="input" required>
           <div class="invalid-feedback">
-            Please provide a valid city.
+            Please write down your thoughts.
           </div>
           <small class="form-text text-muted">
             This is a safe space to write about your day.
           </small>
         </div>
-      </div>
-    </form>
-    <div class="row">
-      <div class="col">
-        <button class="btn btn-outline-primary" type="submit" @click.prevent="createEntry">Done!</button>
+        <div class="row">
+          <div class="col offset-6">
+            <button class="btn btn-outline-primary" type="submit" @click.prevent="createEntry">Done!</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
@@ -46,8 +49,7 @@ export default {
   },
   methods: {
     createEntry () {
-      const valid = this.validate()
-      if (valid) {
+      if (this.validate) {
         const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/entries'
         const today = new Date().toISOString().slice(0, 10)
         const timehelp = new Date()
