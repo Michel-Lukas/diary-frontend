@@ -6,10 +6,10 @@
         <input class="form-control" type="text" placeholder="Dear Diary, " readonly>
       </div>
       <div class="col offset-6">
-        <input class="form-control" type="text" placeholder="Time" readonly>
+        <input class="form-control" type="text" placeholder=time readonly>
       </div>
       <div class="col">
-        <input class="form-control" type="text" placeholder="Date" readonly>
+        <input class="form-control" type="text" placeholder=today readonly>
       </div>
     </div>
     <div class="row">
