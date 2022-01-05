@@ -6,17 +6,20 @@
         <input class="form-control" type="text" placeholder="Dear Diary, " readonly>
       </div>
       <div class="col offset-6">
-        <input class="form-control" type="text" placeholder=time readonly>
+        <input class="form-control" type="text" placeholder="Time" readonly>
       </div>
       <div class="col">
-        <input class="form-control" type="text" placeholder=today readonly>
+        <input class="form-control" type="text" placeholder="Date" readonly>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label></label>
-          <textarea class="form-control" rows="5" id="comment" v-model="input"></textarea>
+          <label for="validationCustom03" class="form-label"></label>
+          <input type="text" class="form-control" id="validationCustom03" v-model="input" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
           <small class="form-text text-muted">
             This is a safe space to write about your day.
           </small>
