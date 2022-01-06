@@ -9,11 +9,11 @@
         </div>
         <div class="col offset-6">
           <label for="validationCustom02" class="form-label"></label>
-          <input type="text" class="form-control" id="validationCustom02" placeholder="Time" readonly>
+          <input type="Time" class="form-control" id="validationCustom02" readonly>
         </div>
         <div class="col">
           <label for="validationCustom03" class="form-label"></label>
-          <input type="text" class="form-control" id="validationCustom03" placeholder="Date" readonly>
+          <input type="date" class="form-control" id="validationCustom03" readonly>
         </div>
       </div>
       <div class="row">
