@@ -2,16 +2,19 @@
   <h1>This is where you find all your Diary Entries!</h1>
   <ul class="list-group list-group-flush">
     <div class="col" v-for="entry in entries" :key="entry.id">
-      <li class="list-group-item">Entry from {{entry.date}}. {{ entry.input }} </li>
+      <li class="list-group-item">Entry from {{entry.date}} at {{entry.time}}. {{ entry.input }} </li>
     </div>
   </ul>
-  <button style="position:absolute;bottom:20px;right:25px;margin:0;padding:5px 5px;" type="button" class="btn btn-primary">Write New Entry</button>
+  <EntryButton style="position:absolute;bottom:20px;right:25px;margin:0;padding:5px 5px;" type="button" class="btn btn-primary">Write New Entry</EntryButton>
 </template>
 
 <script>
 
+import EntryButton from '@/components/EntryButton'
+
 export default {
   name: 'Entries',
+  components: { EntryButton },
   data () {
     return {
       entries: []
