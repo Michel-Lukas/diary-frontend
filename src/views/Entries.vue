@@ -1,17 +1,17 @@
 <template>
   <h1>This is where you find all your Diary Entries!</h1>
-  <ul class="list-group list-group-flush">
-    <div class="col" v-for="entry in entries" :key="entry.id">
-      <li class="list-group-item">Entry from {{entry.date}}. {{ entry.input }} </li>
-    </div>
-  </ul>
+  <div class="container-fluid">
+    <entry-comp-list :entries="this.entries"></entry-comp-list>
+  </div>
   <button style="position:absolute;bottom:20px;right:25px;margin:0;padding:5px 5px;" type="button" class="btn btn-primary">Write New Entry</button>
 </template>
 
 <script>
 
+import EntryCompList from '../components/EntryCompList'
 export default {
   name: 'Entries',
+  components: { EntryCompList },
   data () {
     return {
       entries: []
