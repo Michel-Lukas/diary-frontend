@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Entries from '../views/Entries'
 import newEntry from '../views/newEntry'
+import test from '../views/test'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/newEntry',
     name: 'NewEntry',
     component: newEntry
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: test
   }
 ]
 
