@@ -1,7 +1,5 @@
 <template>
-  <router-link to="/newEntry">
-    <button routerLink="/newEntry" class="btn btn-primary">Write New Entry</button>
-  </router-link>
+    <button type="button" class="btn btn-primary">Write New Entry</button>
 </template>
 
 <script>

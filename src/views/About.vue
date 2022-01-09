@@ -5,7 +5,7 @@
   <AboutInfo></AboutInfo>
 </template>
 <script>
-import AboutInfo from '@/components/AboutInfo'
+import AboutInfo from '../components/AboutInfo'
 export default {
   components: { AboutInfo }
 }

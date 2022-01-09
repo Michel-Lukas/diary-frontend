@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import CreateEntryForm from '@/components/createEntryForm'
+import CreateEntryForm from '../components/createEntryForm'
 export default {
   name: 'newEntry',
   components: { CreateEntryForm },
@@ -15,7 +15,6 @@ export default {
         method: 'GET',
         redirect: 'follow'
       }
-
       fetch(endpoint, requestOptions)
         .then(response => response.json())
         .then(entry => this.entries.push(entry))
@@ -23,7 +22,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
