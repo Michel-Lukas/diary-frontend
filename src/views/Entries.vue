@@ -1,10 +1,18 @@
 <template>
   <h1>This is where you find all your Diary Entries!</h1>
-  <ul class="list-group list-group-flush">
-    <div class="col" v-for="entry in entries" :key="entry.id">
-      <li class="list-group-item">Entry from {{entry.date}} at {{entry.time}}. {{ entry.input }} </li>
+  <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" v-for="entry in entries" :key="entry.id">
+        <div class="card text-black bg-light mb-3">
+          <h5 class="card-header">{{entry.date}}</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{entry.time}}</h5>
+            <h6 class="card-text">{{entry.input}}</h6>
+          </div>
+        </div>
+      </div>
     </div>
-  </ul>
+  </div>
   <EntryButton style="position:absolute;bottom:20px;right:25px;margin:0;padding:5px 5px;" type="button" class="btn btn-primary">Write New Entry</EntryButton>
 </template>
 

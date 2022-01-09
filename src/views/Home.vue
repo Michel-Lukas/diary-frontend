@@ -1,6 +1,7 @@
 <template>
+
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="diary logo" src="../assets/Diary-Logo.jpeg">
     <HelloWorld msg="Welcome to DEAR DIARY!"/>
     <EntryButton></EntryButton>
   </div>

@@ -1,29 +1,14 @@
-# diary-frontend
+# Dear - Diary Application
 
-## Project setup
-```
-npm install
-```
+## How to Use
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Die Bedienung funktioniert recht simpel, einfach per 'Write New Entry' Button oder im oben im Menü zur 'Write Entry' Seite navigieren und dort dann den gewollten Eintrag formulieren.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Bei Beendigung per 'Done!' wird automatisch 'Dear Diary,' dem Anfang hinzugefügt und das Datum plus Uhrzeit ergänzt.
 
-### Run your unit tests
-```
-npm run test:unit
-```
+### Die Funktion Einträge zu löschen ist nicht vorhanden, da schriftliche Einträge auch nicht löschbar sind.
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Die erstellten Einträge kann man unter dem Entries Tab einsehen.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Erstellt im Rahmen der Projetarbeit im Modul Webtechnologien
+

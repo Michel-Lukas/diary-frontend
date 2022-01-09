@@ -26,13 +26,23 @@
             This is a safe space to write about your day.
           </small>
         </div>
+      </div>
         <div class="row">
-          <div class="col offset-6">
-            <button class="btn btn-outline-primary" type="submit" @click.prevent="createEntry">Done!</button>
+          <div class="col-3 offset-4">
+            <select id="update" class="form-select" v-model="update">
+              <option value="" selected disabled>Choose Update...</option>
+              <div v-for="entry in entries" :key="entry.id">
+                <option value="{{entry.id}}">{{entry.date}} @ {{entry.time}}</option>
+              </div>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col offset-5">
+            <button class="btn btn-outline-primary"  style="position:absolute;bottom:20px;" type="submit" @click.prevent="createEntry">Done!</button>
           </div>
         </div>
       </div>
-    </div>
   </form>
 </template>
 
@@ -43,7 +53,8 @@ export default {
     return {
       input: '',
       date: '',
-      time: ''
+      time: '',
+      update: ''
     }
   },
   methods: {
@@ -59,7 +70,8 @@ export default {
         const raw = JSON.stringify({
           input: 'Dear Diary, ' + this.input,
           date: today,
-          time: time
+          time: time,
+          update: this.update
         })
 
         const requestOptions = {

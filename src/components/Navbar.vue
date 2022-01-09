@@ -11,7 +11,6 @@
           <router-link class = "nav-link" to ="/About">About</router-link>
           <router-link class = "nav-link" to ="/Entries">Entries</router-link>
           <router-link class = "nav-link" to ="/newEntry">Write Entry</router-link>
-          <router-link class="nav-link" to ="/test">test</router-link>
         </ul>
       </div>
     </div>
